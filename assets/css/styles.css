@@ -418,8 +418,15 @@ header .body {
   background: #2e2100;
 }
 
+.feedback-list {
+  display: flex;
+  overflow: hidden; /* Khi phần tử con vượt quá thì ẩn đi */
+}
+
 .feedback-item {
   display: flex;
+  width: 100%; /* Nằm gọn trong feedback list */
+  flex-shrink: 0; /* Làm cho feedback không còn bị ép lại nữa */
 }
 
 .feedback-item .avatar {
