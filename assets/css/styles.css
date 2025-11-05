@@ -64,6 +64,23 @@ a {
   line-height: 1.26;
 }
 
+/* Nếu văn bản dài hơn số dòng thì sẽ thành dấu 3 chấm*/
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+/* Làm cho nó bẻ xuống hàng mới mà không bị đâm xuyên qua */
+.break-all {
+  word-break: break-all;
+}
+
 /* ====================== Header ============================= */
 
 .header {
@@ -353,6 +370,7 @@ header .body {
 }
 
 .popular .course-item .title a {
+  padding-right: 6px;
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.67;
