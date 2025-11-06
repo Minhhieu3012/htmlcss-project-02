@@ -483,3 +483,52 @@ header .body {
   line-height: 1.54;
   color: #ffffff;
 }
+
+/* ====================== Features ============================= */
+.features {
+  margin-top: 135px; /* 200px - 65px = 135px */
+  padding: 65px 0;
+}
+
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .images {
+  display: flex;
+  gap: 0 30px; /* Nếu có 1 giá trị thì là cả ngang cả dọc */
+}
+
+.features .images img {
+  width: 270px;
+  height: 404px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.features img.lower {
+  margin-top: 34px; /* Làm ảnh thấp xuống */
+}
+
+.features .content {
+  width: 41%;
+  display: flex;
+  flex-direction: column; /* Đảo trục */
+  align-items: flex-start; /* Dồn hết về bên trái */
+  justify-content: center;
+}
+
+.features .desc {
+  margin-top: 16px;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #5f5b53;
+}
+
+.features .cta-btn {
+  margin-top: 32px;
+  min-width: 137px;
+  color: #fff;
+  background: var(--primary-color);
+}
