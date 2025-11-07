@@ -573,10 +573,14 @@ header .body {
   display: flex;
   gap: 30px; /* Khoảng cách giữa các khối */
   margin-top: 55px;
+  overflow: hidden;
 }
 
 .blog .item {
-  width: 33.33%; /* Chia đều độ rộng giữa các ảnh */
+  flex-shrink: 0; /* Giữ đúng kích thước và nếu cộng thêm vào thì nó sẽ bị chồi ra */
+  width: calc(
+    33.33% - 20px
+  ); /* Chia đều độ rộng giữa các ảnh. 2 khoảng trắng 30px là 60px chia cho 3 là 20px. Giảm độ rộng mỗi cái item đi 20px. Giải quyết được vấn đề mất nội dung của item 3 */
   border-radius: 16px;
   background: #ffffff;
 }
@@ -637,6 +641,30 @@ header .body {
   color: #171100;
 }
 
+.blog .item .btn {
+  font-size: 1.4rem;
+}
+
 .blog .item .btn:hover {
   background: var(--primary-color);
+}
+
+.blog .dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.blog .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  cursor: pointer;
+}
+
+.blog .dot.active {
+  background: var(--primary-color);
+  cursor: default;
 }
