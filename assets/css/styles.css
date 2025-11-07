@@ -549,3 +549,94 @@ header .body {
   width: 470px;
   height: 440px;
 }
+
+/* ====================== Blog ============================= */
+.blog {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #fffcf4;
+}
+
+.blog .blog-top {
+  text-align: center;
+}
+
+.blog .desc {
+  margin: 16px auto auto;
+  width: 448px;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #696262;
+}
+
+.blog-list {
+  display: flex;
+  gap: 30px; /* Khoảng cách giữa các khối */
+  margin-top: 55px;
+}
+
+.blog .item {
+  width: 33.33%; /* Chia đều độ rộng giữa các ảnh */
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.blog .item:hover {
+  box-shadow: 0px 16px 32px 0px #0000000d;
+}
+
+.blog .thumb {
+  width: 100%; /* Để thấy được nó chia 33.33% rõ ràng */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.blog .item .info {
+  padding: 20px 20px 28px;
+}
+
+.blog .item .date {
+  position: relative;
+  display: inline-flex; /* Đổi qua như này thay vì flex, nó sẽ làm mất đi cái tính chiếm độ rộng của thẻ cha đi */
+  align-items: center;
+  padding-bottom: 12px;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #5f5b53;
+}
+
+.blog .item .date::before {
+  content: "";
+  display: inline-block; /* Có cái này mới set được height, width*/
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.blog .item .date::after {
+  position: absolute;
+  left: 0;
+  right: -27px;
+  bottom: 0;
+  content: "";
+  display: inline-block; /* Có thẻ cha là display flex rồi nên không đổi thành block để xuống hàng được */
+  height: 1px;
+  background: #e2dfda;
+  border-radius: 0.5px;
+}
+
+.blog .item .title a {
+  display: inline-block; /* Vì thẻ <a> là thẻ inline nên nó không hoạt động được cái margin top và margin bottom */
+  margin: 12px 0 12px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #171100;
+}
+
+.blog .item .btn:hover {
+  background: var(--primary-color);
+}
