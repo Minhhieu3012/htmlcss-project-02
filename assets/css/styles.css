@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-/* Tạo biến cho font */
 :root {
   --primary-color: #ffb900;
   --font-heading: Sen, sans-serif;
@@ -30,16 +29,16 @@ a {
 }
 
 .btn {
-  display: inline-block; /* Cho phép đặt kích thước và padding */
+  display: inline-block;
   min-width: 118px;
   padding: 0 16px;
-  line-height: 50px; /* Chiều cao nút */
+  line-height: 50px;
   font-weight: 600;
   font-size: 1.6rem;
   text-align: center;
   color: #ffffff;
   background: #171100;
-  border-radius: 999px; /* Bo tròn hoàn toàn */
+  border-radius: 999px;
 }
 
 .btn:hover {
@@ -64,7 +63,6 @@ a {
   line-height: 1.26;
 }
 
-/* Nếu văn bản dài hơn số dòng thì sẽ thành dấu 3 chấm*/
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: var(--line-clamp, 1);
@@ -76,7 +74,6 @@ a {
   --line-clamp: 2;
 }
 
-/* Làm cho nó bẻ xuống hàng mới mà không bị đâm xuyên qua */
 .break-all {
   word-break: break-all;
 }
@@ -89,14 +86,14 @@ a {
 
 .header.fixed {
   position: sticky;
-  top: -28px; /* Bù cho padding trên của header */
-  z-index: 1; /* Sửa lỗi bị ảnh đè lên header */
+  top: -28px;
+  z-index: 1;
 }
 
 header .body {
   display: flex;
   align-items: center;
-  padding: 36px 0 8px; /* Padding trên 36px, dưới 8px */
+  padding: 36px 0 8px;
 }
 
 .nav {
@@ -117,7 +114,7 @@ header .body {
 .nav a:hover,
 .nav li.active a {
   /* font-weight: 600; */
-  text-shadow: 1px 0 0 currentColor; /* Làm cho chữ đậm hơn và không bị giật nội dung như font-weight*/
+  text-shadow: 1px 0 0 currentColor;
   color: #171100;
 }
 
@@ -169,7 +166,7 @@ header .body {
   position: absolute;
   right: 0;
   bottom: 48px;
-  width: 270px; /* Set width, để chiều cao auto */
+  width: 270px;
   padding: 24px;
   background: #ffffff;
   box-shadow: 0px 16px 32px 0px #0000000d;
@@ -250,7 +247,7 @@ header .body {
   align-items: center;
   margin-left: 28px;
   border: none;
-  background: transparent; /* Trong suốt */
+  background: transparent;
   cursor: pointer;
 }
 
@@ -274,7 +271,7 @@ header .body {
 }
 
 .hero .stats {
-  margin: 8px 0 0 -28px; /* -28px làm cho nó cân lại vì chữ 50K nó bị dịch sang phải*/
+  margin: 8px 0 0 -28px;
 }
 
 .hero .stats strong {
@@ -289,7 +286,7 @@ header .body {
 /* ====================== Popular ============================= */
 .popular {
   padding: 65px 0;
-  margin-top: 135px; /* Tính luôn cả padding vào nên còn 135px*/
+  margin-top: 135px;
 }
 
 .popular-top {
@@ -348,12 +345,10 @@ header .body {
 }
 
 .popular .course-item .thumb {
-  width: calc(
-    100% + 2px
-  ); /* Nó sẽ vừa với course-item và tăng thêm kích thước để đè lên border */
+  width: calc(100% + 2px);
   height: 278px;
   margin: -1px;
-  object-fit: cover; /* Tránh méo ảnh */
+  object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
 
@@ -365,7 +360,7 @@ header .body {
 .popular .course-item .rating,
 .popular .course-item .head {
   display: flex;
-  align-items: center; /* Căn giữa theo trục ngang */
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -420,13 +415,13 @@ header .body {
 
 .feedback-list {
   display: flex;
-  overflow: hidden; /* Khi phần tử con vượt quá thì ẩn đi */
+  overflow: hidden;
 }
 
 .feedback-item {
   display: flex;
-  width: 100%; /* Nằm gọn trong feedback list */
-  flex-shrink: 0; /* Làm cho feedback không còn bị ép lại nữa */
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .feedback-item .avatar {
@@ -497,7 +492,7 @@ header .body {
 
 .features .images {
   display: flex;
-  gap: 0 30px; /* Nếu có 1 giá trị thì là cả ngang cả dọc */
+  gap: 0 30px;
 }
 
 .features .images img {
@@ -508,14 +503,14 @@ header .body {
 }
 
 .features img.lower {
-  margin-top: 34px; /* Làm ảnh thấp xuống */
+  margin-top: 34px;
 }
 
 .features .content {
   width: 41%;
   display: flex;
-  flex-direction: column; /* Đảo trục */
-  align-items: flex-start; /* Dồn hết về bên trái */
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -571,16 +566,14 @@ header .body {
 
 .blog-list {
   display: flex;
-  gap: 30px; /* Khoảng cách giữa các khối */
+  gap: 30px;
   margin-top: 55px;
   overflow: hidden;
 }
 
 .blog .item {
-  flex-shrink: 0; /* Giữ đúng kích thước và nếu cộng thêm vào thì nó sẽ bị chồi ra */
-  width: calc(
-    33.33% - 20px
-  ); /* Chia đều độ rộng giữa các ảnh. 2 khoảng trắng 30px là 60px chia cho 3 là 20px. Giảm độ rộng mỗi cái item đi 20px. Giải quyết được vấn đề mất nội dung của item 3 */
+  flex-shrink: 0;
+  width: calc(33.33% - 20px);
   border-radius: 16px;
   background: #ffffff;
 }
@@ -590,7 +583,7 @@ header .body {
 }
 
 .blog .thumb {
-  width: 100%; /* Để thấy được nó chia 33.33% rõ ràng */
+  width: 100%;
   height: 250px;
   object-fit: cover;
   border-radius: 16px 16px 0 0;
@@ -602,7 +595,7 @@ header .body {
 
 .blog .item .date {
   position: relative;
-  display: inline-flex; /* Đổi qua như này thay vì flex, nó sẽ làm mất đi cái tính chiếm độ rộng của thẻ cha đi */
+  display: inline-flex;
   align-items: center;
   padding-bottom: 12px;
   font-size: 1.4rem;
@@ -612,7 +605,7 @@ header .body {
 
 .blog .item .date::before {
   content: "";
-  display: inline-block; /* Có cái này mới set được height, width*/
+  display: inline-block;
   width: 6px;
   height: 6px;
   margin-right: 4px;
@@ -626,14 +619,14 @@ header .body {
   right: -27px;
   bottom: 0;
   content: "";
-  display: inline-block; /* Có thẻ cha là display flex rồi nên không đổi thành block để xuống hàng được */
+  display: inline-block;
   height: 1px;
   background: #e2dfda;
   border-radius: 0.5px;
 }
 
 .blog .item .title a {
-  display: inline-block; /* Vì thẻ <a> là thẻ inline nên nó không hoạt động được cái margin top và margin bottom */
+  display: inline-block;
   margin: 12px 0 12px;
   font-weight: 600;
   font-size: 1.6rem;
