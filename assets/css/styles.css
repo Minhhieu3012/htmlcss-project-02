@@ -508,7 +508,7 @@ header .body {
   object-fit: cover;
 }
 
-.features img.lower {
+.features .feature-lower {
   margin-top: 34px;
 }
 
