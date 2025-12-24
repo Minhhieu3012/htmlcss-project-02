@@ -17,29 +17,41 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- PC Header -->
     <header class="header fixed">
       <div class="main-content">
         <div class="body">
+          <!-- Tablet / Mobile Menu -->
+          <label for="menu-checkbox" class="toggle-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                fill="currentColor"
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </label>
           <!-- Logo -->
-          <img src="./assets/img/logo.svg" alt="Lesson." class="logo" />
+          <a href="#"
+            ><img src="./assets/img/logo.svg" alt="Lesson." class="logo"
+          /></a>
 
           <!-- Nav -->
-          <nav class="nav">
+          <nav id="pc-nav" class="nav">
             <ul>
               <li class="active">
-                <a href="#!">Home</a>
+                <a href="#">Home</a>
               </li>
               <li>
-                <a href="#!">Courses</a>
+                <a href="#courses">Courses</a>
               </li>
               <li>
-                <a href="#!">Pricing</a>
+                <a href="#pricing">Pricing</a>
               </li>
               <li>
-                <a href="#!">Reviews</a>
+                <a href="#reviews">Reviews</a>
               </li>
             </ul>
           </nav>
@@ -49,6 +61,36 @@
             <a href="#!" class="btn sign-up-btn">Sign Up</a>
           </div>
         </div>
+      </div>
+    </header>
+
+    <!-- Tablet / Mobile Header -->
+    <header class="mobile-header">
+      <input
+        type="checkbox"
+        name=""
+        id="menu-checkbox"
+        class="menu-checkbox"
+        hidden
+      />
+
+      <!-- Overlay -->
+      <label for="menu-checkbox" class="menu-overlay"></label>
+
+      <!-- Menu Content -->
+      <div class="menu-drawer">
+        <!-- Logo -->
+        <a href="#"><img src="./assets/img/logo.svg" alt="Lesson." /></a>
+
+        <!-- Navigation -->
+        <ul id="mobile-nav"></ul>
+        <script>
+          const pcNav = document.querySelector("#pc-nav");
+          const mobileNav = document.querySelector("#mobile-nav");
+
+          // Copy from PC nav -> Mobile nav
+          mobileNav.innerHTML = pcNav.innerHTML;
+        </script>
       </div>
     </header>
 
@@ -130,7 +172,7 @@
       </div>
 
       <!-- Popular -->
-      <div class="popular">
+      <div id="courses" class="popular">
         <div class="main-content">
           <!-- Popular Top -->
           <div class="popular-top">
@@ -396,7 +438,7 @@
       </div>
 
       <!-- Features 1 -->
-      <div class="features">
+      <div id="pricing" class="features">
         <div class="main-content">
           <div class="body">
             <div class="images">
@@ -453,7 +495,7 @@
       </div>
 
       <!-- Blog -->
-      <div class="blog">
+      <div id="reviews" class="blog">
         <div class="main-content">
           <div class="blog-top">
             <h2 class="heading lv2">Our blog</h2>
@@ -668,7 +710,11 @@
         <div class="row">
           <!-- Column 1 -->
           <div class="column">
-            <img src="./assets/img/logo-white.svg" alt="Lesson." class="logo" />
+            <img
+              src="./assets/img/logo-white.svg"
+              alt="Lesson."
+              class="footer-logo"
+            />
             <p class="desc">
               Need to help for your dream Career? trust us. With Lesson, study
               becomes a lot easier with us.

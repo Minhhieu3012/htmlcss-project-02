@@ -7,6 +7,11 @@
   --font-heading: Sen, sans-serif;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -327,7 +332,8 @@ header .body {
 }
 
 .popular .course-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 55px;
 }
